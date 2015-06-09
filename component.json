@@ -1,0 +1,17 @@
+{
+  "name": "analytics.js-integration-satismeter",
+  "repo": "segment-integrations/analytics.js-integration-satismeter",
+  "description": "The Satismeter analytics.js integration.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "segmentio/analytics.js-integration": "0.3.x",
+    "segmentio/when": "0.0.1"
+  },
+  "development": {
+    "segmentio/analytics.js": "*",
+    "segmentio/clear-env": "0.2.x",
+    "segmentio/analytics.js-integration-tester": "1.4.x"
+  }
+}
