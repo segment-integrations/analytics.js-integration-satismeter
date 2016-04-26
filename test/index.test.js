@@ -126,5 +126,21 @@ describe('SatisMeter', function() {
         });
       });
     });
+
+    describe('#page', function() {
+      beforeEach(function() {
+        analytics.stub(window, 'satismeter');
+      });
+
+      it('should send token and user id', function() {
+        analytics.user().id('id');
+        analytics.page('Pricing');
+        analytics.called(window.satismeter, {
+          writeKey: options.token,
+          userId: 'id',
+          type: 'page'
+        });
+      });
+    });
   });
 });
