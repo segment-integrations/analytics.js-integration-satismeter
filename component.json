@@ -2,7 +2,7 @@
   "name": "analytics.js-integration-satismeter",
   "repo": "segment-integrations/analytics.js-integration-satismeter",
   "description": "The Satismeter analytics.js integration.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "lib/index.js",
   "dependencies": {
