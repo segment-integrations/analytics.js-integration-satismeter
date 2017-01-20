@@ -106,7 +106,7 @@ describe('SatisMeter', function() {
           writeKey: options.apiKey,
           userId: 'id',
           traits: {
-            createdAt: now.toISOString()
+            createdAt: now
           },
           type: 'identify'
         });
@@ -247,12 +247,12 @@ describe('SatisMeter - legacy setup', function() {
 
       it('should send signUpDate', function() {
         var now = new Date();
-        analytics.identify('id', { created: now });
+        analytics.identify('id', { createdAt: now });
         analytics.called(window.satismeter, {
           writeKey: options.token,
           userId: 'id',
           traits: {
-            createdAt: now.toISOString()
+            createdAt: now
           },
           type: 'identify'
         });
