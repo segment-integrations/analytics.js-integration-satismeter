@@ -10,8 +10,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "test": "make test",
-    "example": "beefy example.js"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -32,7 +31,6 @@
     "@segment/analytics.js-integration-tester": "^2.0.0",
     "@segment/clear-env": "^2.0.0",
     "@segment/eslint-config": "^3.1.1",
-    "beefy": "^2.1.8",
     "browserify": "^13.0.0",
     "browserify-istanbul": "^2.0.0",
     "eslint": "^2.9.0",
