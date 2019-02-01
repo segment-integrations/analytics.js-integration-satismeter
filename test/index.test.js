@@ -64,14 +64,15 @@ describe('SatisMeter', function() {
         analytics.stub(window, 'satismeter');
       });
 
-      it('should send apiKey and user id', function() {
+      it('should send apiKey, user id and source', function() {
         analytics.identify('id');
         analytics.called(window.satismeter, {
           writeKey: options.apiKey,
           userId: 'id',
           traits: {
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -83,7 +84,8 @@ describe('SatisMeter', function() {
           traits: {
             email: 'email@example.com'
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -95,7 +97,8 @@ describe('SatisMeter', function() {
           traits: {
             name: 'john doe'
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -108,7 +111,8 @@ describe('SatisMeter', function() {
           traits: {
             createdAt: now
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -128,7 +132,8 @@ describe('SatisMeter', function() {
             },
             language: 'en'
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
     });
@@ -138,13 +143,14 @@ describe('SatisMeter', function() {
         analytics.stub(window, 'satismeter');
       });
 
-      it('should send apiKey and user id', function() {
+      it('should send apiKey, user id and source', function() {
         analytics.user().id('id');
         analytics.page('Pricing');
         analytics.called(window.satismeter, {
           writeKey: options.apiKey,
           userId: 'id',
-          type: 'page'
+          type: 'page',
+          source: 'analytics.js'
         });
       });
     });
@@ -210,14 +216,15 @@ describe('SatisMeter - legacy setup', function() {
         analytics.stub(window, 'satismeter');
       });
 
-      it('should send token and user id', function() {
+      it('should send token, user id and source', function() {
         analytics.identify('id');
         analytics.called(window.satismeter, {
           writeKey: options.token,
           userId: 'id',
           traits: {
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -229,7 +236,8 @@ describe('SatisMeter - legacy setup', function() {
           traits: {
             email: 'email@example.com'
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -241,7 +249,8 @@ describe('SatisMeter - legacy setup', function() {
           traits: {
             name: 'john doe'
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -254,7 +263,8 @@ describe('SatisMeter - legacy setup', function() {
           traits: {
             createdAt: now
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
 
@@ -274,7 +284,8 @@ describe('SatisMeter - legacy setup', function() {
             },
             language: 'en'
           },
-          type: 'identify'
+          type: 'identify',
+          source: 'analytics.js'
         });
       });
     });
@@ -284,13 +295,14 @@ describe('SatisMeter - legacy setup', function() {
         analytics.stub(window, 'satismeter');
       });
 
-      it('should send token and user id', function() {
+      it('should send token, user id and source', function() {
         analytics.user().id('id');
         analytics.page('Pricing');
         analytics.called(window.satismeter, {
           writeKey: options.token,
           userId: 'id',
-          type: 'page'
+          type: 'page',
+          source: 'analytics.js'
         });
       });
     });
